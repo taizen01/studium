@@ -7,7 +7,6 @@ i = 0
 unsorted = []
 while i < 10:
     unsorted.append(random.randint(0, 100))
-    i = i + 1
 
 print(unsorted)
 
