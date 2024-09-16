@@ -4,8 +4,6 @@ def weihnachtsbaum():
     stamm = int(input("Wie viele stämme soll der baum haben "))
     stammsize = int(input("Wie lang soll soll der Stamm sein? "))
 
-
-    ## Baumerstellung mittels Schleife
     i = 0
     k = size
 
@@ -17,7 +15,7 @@ def weihnachtsbaum():
             space = " "
             baumstar = stern
             baumspace = (k * space)
-            if i >= 1:         #Um die erste Ausgabe zu überspringen und stattdessen den Stern mit dem richtigen Spacing auszugeben. 10 mal leerzeichen mit Sternchen.
+            if i >= 1:
                 print(baumspace + baum)
             else:
                 print(baumspace + baumstar)
