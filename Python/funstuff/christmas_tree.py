@@ -1,21 +1,21 @@
 ### Abfrage wie groß der Baum werden soll
 size = int(input("Bitte gebe die größe des Baumes an: "))
+stern = input("Was möchtest du als Stern dekorieren? ")
 
-## Baumerstellung mittels Schleife
-i = 0
+## Variable für das richtige Spacing am Anfang der ersten Ausgabe
 k = size
 
-while i <= size:
-    j = "*"
-    baum = 2*(i * j)
+## Baumerstellung mittels Schleife
+for i in range(0, size):
+    j = "."
+    baum = 2*(i * j)+j
     space = " "
-    baumstar = 'x'
-    baumspace = k * space
-    if i >= 1:
+    baumstar = stern
+    baumspace = (k * space)
+    if i >= 1:         #Um die erste Ausgabe zu überspringen und stattdessen den Stern mit dem richtigen Spacing auszugeben. 10 mal leerzeichen mit Sternchen.
         print(baumspace + baum)
     else:
         print(baumspace + baumstar)
-    i+=1
     k-=1
 
 
