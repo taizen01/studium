@@ -30,8 +30,6 @@ while True:
         print('Das hast keine Zahl angegeben.')
         continue
 
-
-        
 print("Summary of time spent on tasks: \n")
 for i in range(1,len(lst)+1):
     print(f'{lst[i]}: {time_spent[i-1]:.1f} hours spent.')
