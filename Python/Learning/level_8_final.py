@@ -1,3 +1,7 @@
+import os
+
+os.system("cls")
+
 chat_logs = [
     "My order is delayed wrong driver", 
     "I want to return my purchase", 
@@ -33,9 +37,26 @@ def categorize_issues(n,k):
                     categories[key]+=1
                     categorized = True # Wenn ein passendes Wort gefunden aus Satz, gehe zum nächsten
                     break
+    print("\nIssue Categories: ")
+    for key, value in categories.items():
+        print(f'{key}: {value}\n')
+
+
+
+
+
+def keyword_search(n, l):
+        newlist = [x for x in l if n.upper() in x.upper()]
+        print("Chat logs containing the keyword: ")
+
+        for i in newlist:
+             print(f'-> {i}')
+
 
                 
-            
-categorize_issues(chat_logs, keywords)
+                  
 
-print(categories)
+eingabe = input("Enter a keyword to search in chat logs: ")
+
+categorize_issues(chat_logs,keywords)   
+keyword_search(eingabe, chat_logs)
